@@ -2,23 +2,29 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import * as $0 from "./routes/blog.tsx";
-import * as $1 from "./routes/blog/[id].tsx";
-import * as $2 from "./routes/index.tsx";
+import * as $0 from "./routes/_middleware.tsx";
+import * as $1 from "./routes/blog.tsx";
+import * as $2 from "./routes/blog/[id].tsx";
+import * as $3 from "./routes/blog/settings.tsx";
+import * as $4 from "./routes/index.tsx";
 import * as $$0 from "./islands/Counter.tsx";
-import * as $$1 from "./islands/Todo.tsx";
-import * as $$2 from "./islands/TodoList.tsx";
+import * as $$1 from "./islands/LocaleSelector.tsx";
+import * as $$2 from "./islands/Todo.tsx";
+import * as $$3 from "./islands/TodoList.tsx";
 
 const manifest = {
   routes: {
-    "./routes/blog.tsx": $0,
-    "./routes/blog/[id].tsx": $1,
-    "./routes/index.tsx": $2,
+    "./routes/_middleware.tsx": $0,
+    "./routes/blog.tsx": $1,
+    "./routes/blog/[id].tsx": $2,
+    "./routes/blog/settings.tsx": $3,
+    "./routes/index.tsx": $4,
   },
   islands: {
     "./islands/Counter.tsx": $$0,
-    "./islands/Todo.tsx": $$1,
-    "./islands/TodoList.tsx": $$2,
+    "./islands/LocaleSelector.tsx": $$1,
+    "./islands/Todo.tsx": $$2,
+    "./islands/TodoList.tsx": $$3,
   },
   baseUrl: import.meta.url,
 };
