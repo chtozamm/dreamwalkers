@@ -6,6 +6,6 @@ snippet: This is the second post.
 
 ## Subtitle
 
-| Table | Column |
-| ----- | ------ |
-| asda  | asd    |
+| Table         | Column        |
+| ------------- | ------------- |
+| table content | table content |
