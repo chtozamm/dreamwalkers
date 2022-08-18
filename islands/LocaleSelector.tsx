@@ -4,15 +4,19 @@ import { useState } from "preact/hooks";
 import { tw } from "@twind";
 
 const localeFmt = new Intl.DisplayNames("en", { type: "language" });
+const date = new Date();
 
 export default function LocaleSelector() {
   const [locale, setLocale] = useState("");
 
   let language: string | undefined = undefined;
+  let timeSample: string | undefined = undefined;
   if (locale) {
     try {
       const loc = new Intl.Locale(locale);
       language = localeFmt.of(loc.language);
+      const dateFmt = new Intl.DateTimeFormat(locale, { dateStyle: "full" });
+      timeSample = dateFmt.format(date);
     } catch {
       // ignore error
     }
@@ -34,9 +38,16 @@ export default function LocaleSelector() {
       >
         Save
       </button>
-      <p class={tw`text-gray-400 `}>
-        {language}
-      </p>
+      {language && timeSample &&
+        (
+          <dl class={tw`mt-4 text-gray-600`}>
+            <dd class={tw`font-bold`}>Language</dd>
+            <dt>{language}</dt>
+
+            <dd class={tw`font-bold`}>Time Sample</dd>
+            <dt>{timeSample}</dt>
+          </dl>
+        )}
     </form>
   );
 }
