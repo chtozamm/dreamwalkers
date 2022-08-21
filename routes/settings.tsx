@@ -14,7 +14,7 @@ export const handler: Handlers<State, State> = {
     const form = await req.formData();
     const locale = form.get("locale");
     const headers = new Headers({
-      Location: "/blog/settings",
+      Location: "/settings",
     });
     if (typeof locale === "string") {
       setCookie(headers, {
@@ -33,8 +33,8 @@ export const handler: Handlers<State, State> = {
 export default function Settings(props: PageProps<State>) {
   const { locales } = props.data;
   return (
-    <div class={tw`mt-12 max-w-screen-md mx-auto`}>
-      <div class={tw`flex justify-between items-center`}>
+    <div class={tw`max-w-screen-lg mx-auto px-4`}>
+      <div class={tw`flex justify-between  my-5 md:(my-12) items-center`}>
         <h1 class={tw`text-5xl font-bold`}>Settings</h1>
         <a href="/">
           <svg

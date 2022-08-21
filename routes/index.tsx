@@ -14,8 +14,8 @@ export const handler: Handlers<Post[]> = {
 export default function Blog(props: PageProps<Post[]>) {
   const posts = props.data;
   return (
-    <div class={tw`mt-12 max-w-screen-md mx-auto`}>
-      <div class={tw`flex justify-between items-center`}>
+    <div class={tw`max-w-screen-lg mx-auto px-4`}>
+      <div class={tw`flex justify-between  my-5 md:(my-12) items-center`}>
         <h1 class={tw`text-5xl font-bold`}>Blog</h1>
         <a href="/settings">
           <svg
@@ -39,7 +39,7 @@ export default function Blog(props: PageProps<Post[]>) {
           </svg>
         </a>
       </div>
-      <ul class={tw`mt-8`}>
+      <ul>
         {posts.map((post) => <PostEntry post={post} />)}
         {
           /* <p class={tw`text-gray-600`}>Date</p>

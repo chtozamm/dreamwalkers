@@ -28,8 +28,8 @@ export default function BlogPostPage(props: PageProps<Data>) {
   });
   const html = gfm.render(post.content);
   return (
-    <div class={tw`mt-12 max-w-screen-md mx-auto`}>
-      <div class={tw`flex justify-between items-center`}>
+    <div class={tw`max-w-screen-lg mx-auto px-4`}>
+      <div class={tw`flex justify-between  mt-5 md:(mt-12) items-center`}>
         <p class={tw`text-gray-600`}>{dateFmt.format(post.published_at)}</p>
         <a href="/">
           <svg

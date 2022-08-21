@@ -4,13 +4,5 @@ export * from "twind";
 export const config: Configuration = {
   darkMode: "class",
   mode: "silent",
-  theme: {
-    extend: {
-      backgroundImage: {
-        'raindrops': "url('raindrops-animate.svg')",
-        'header-bg': "url('header_bg.svg')",
-      }
-    }
-  }
 };
 if (IS_BROWSER) setup(config);
