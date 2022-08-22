@@ -56,6 +56,7 @@ export default function BlogPostPage(props: PageProps<Data>) {
       <div
         class={tw`text-justify mt-12 md:(mt-12 px-0)` +
           " markdown-body"}
+        data-color-mode="auto"
         dangerouslySetInnerHTML={{ __html: html }}
       />
       <p class={tw`text-sm text-right mt-16 md:(px-0) text-gray-400`}>
