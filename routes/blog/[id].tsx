@@ -28,9 +28,9 @@ export default function BlogPostPage(props: PageProps<Data>) {
   });
   const html = gfm.render(post.content);
   return (
-    <div class={tw`max-w-screen-lg mx-auto px-4`}>
-      <div class={tw`flex justify-between  mt-5 md:(mt-12) items-center`}>
-        <p class={tw`text-gray-600`}>{dateFmt.format(post.published_at)}</p>
+    <div class={tw`max-w-screen-sm mx-auto px-6 mt-12 md:(mt-12 px-0)`}>
+      {
+        /* <div class={tw`flex justify-between  mt-5 md:(mt-12) items-center`}>
         <a href="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -47,15 +47,20 @@ export default function BlogPostPage(props: PageProps<Data>) {
             />
           </svg>
         </a>
-      </div>
-      <h1 class={tw`text-5xl mt-2 font-bold`}>
+      </div> */
+      }
+      <h1 class={tw`text-4xl md:(text-5xl) text-center mt-2 font-bold`}>
         {post.title}
       </h1>
       <style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
       <div
-        class={tw`mt-12` + " markdown-body"}
+        class={tw`text-justify mt-12 md:(mt-12 px-0)` +
+          " markdown-body"}
         dangerouslySetInnerHTML={{ __html: html }}
       />
+      <p class={tw`text-sm text-right mt-16 md:(px-0) text-gray-400`}>
+        {dateFmt.format(post.published_at)}
+      </p>
     </div>
   );
 }

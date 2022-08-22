@@ -33,7 +33,7 @@ export const handler: Handlers<State, State> = {
 export default function Settings(props: PageProps<State>) {
   const { locales } = props.data;
   return (
-    <div class={tw`max-w-screen-lg mx-auto px-4`}>
+    <div class={tw`max-w-screen-sm mx-auto px-4`}>
       <div class={tw`flex justify-between  my-5 md:(my-12) items-center`}>
         <h1 class={tw`text-5xl font-bold`}>Settings</h1>
         <a href="/">
