@@ -1,13 +1,5 @@
 # Dreamwalkers 🌙
 
-Created with Fresh (Deno framework)
+<img src="https://github.com/chtozamm/dreamwalkers-blog/blob/main/static/index_page.png?raw=true" width="100%">
 
-### Usage
-
-Start the project:
-
-```
-deno task start
-```
-
-This will watch the project directory and restart as necessary.
+[![Made with Fresh](https://fresh.deno.dev/fresh-badge-dark.svg)](https://fresh.deno.dev)
